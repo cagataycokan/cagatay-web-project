@@ -1,0 +1,35 @@
+<settings>
+
+<servers>
+  <server>
+    <id>cagatay-cagatay-devops-cicd</id>
+    <username>aws</username>
+    <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
+  </server>
+</servers>
+
+<profiles>
+  <profile>
+    <id>cagatay-cagatay-devops-cicd</id>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+    <repositories>
+      <repository>
+        <id>cagatay-cagatay-devops-cicd</id>
+        <url>https://cagatay-464681551537.d.codeartifact.us-east-1.amazonaws.com/maven/cagatay-devops-cicd/</url>
+      </repository>
+    </repositories>
+  </profile>
+</profiles>
+
+<mirrors>
+  <mirror>
+    <id>cagatay-cagatay-devops-cicd</id>
+    <name>cagatay-cagatay-devops-cicd</name>
+    <url>https://cagatay-464681551537.d.codeartifact.us-east-1.amazonaws.com/maven/cagatay-devops-cicd/</url>
+    <mirrorOf>*</mirrorOf>
+  </mirror>
+</mirrors>
+
+</settings>
