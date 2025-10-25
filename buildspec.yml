@@ -9,7 +9,7 @@ phases:
       - echo Logging in to AWS CodeArtifact...
       - CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain cagatay --domain-owner 464681551537 --region us-east-1 --query authorizationToken --output text`
       - export CODEARTIFACT_AUTH_TOKEN
-    build:
+  build:
     commands:
       - echo "====== BEGINNING TEST PHASE ======"
       - echo "Running tests on `date`"
